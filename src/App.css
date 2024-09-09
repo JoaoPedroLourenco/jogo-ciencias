@@ -5,7 +5,7 @@
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  gap: 2em;
+  gap: .8em;
 }
 
 .App > h1{

@@ -1,6 +1,8 @@
 import './App.css'
 import enviar from './assets/mandar.png'
 import { useState } from 'react'
+
+// import Confetti from 'react-confetti'
  
 import {listaPalavras} from './data/ListaPalavras'
  
@@ -38,12 +40,38 @@ function App() {
  
   return (
       <div className='App'>
-          <h1>Transcrição e Tradução Gênica</h1>
-          <p>A transcrição e tradução gênica são processos fundamentais para a expressão gênica. A <h3 style={{backgroundColor: transcricao ? "#2d2d2d" : "white", transition: ".5s"}}>{transcricao}</h3> é a primeira etapa, onde o DNA é copiado para formar uma molécula de RNA mensageiro (mRNA). Este processo ocorre no núcleo das células e é mediado pela enzima RNA <h3 style={{backgroundColor: poli ? "#2d2d2d" : "white", transition: ".5s"}}>{poli}</h3>. O mRNA resultante é então processado e transportado para o citoplasma. </p>
+        {/*<Confetti/>*/}
+        <h1>Transcrição e Tradução Gênica</h1>
+          <p>
+            A tradução gênica é o processo no qual ocorre a síntese de uma cadeia polipeptídica. Ele se inicia quando ocorre o emparelhamento de um RNA transportador que transporta metionina com o códon de início de tradução localizado em um RNA mensageiro. 
+          </p>
           <br />
-          <p>Na tradução, o mRNA serve como molde para a síntese de proteínas. Este processo ocorre nos <h3 style={{backgroundColor: ribo ? "#2d2d2d" : "white", transition: ".5s"}}>{ribo}</h3>, que leem a sequência de nucleotídeos do mRNA e, com a ajuda do RNA transportador (tRNA), traduzem essa sequência em uma cadeia de aminoácidos, formando uma proteína funcional. A sequência específica de nucleotídeos no mRNA determina a ordem dos aminoácidos na proteína, o que, por sua vez, determina sua estrutura e função.</p>
-          <br />
-          <p>Esses processos são essenciais para a regulação da atividade celular e o funcionamento correto dos organismos vivos.</p>
+          <p>
+            Primeiramente, o ribossomo se une ao RNA mensageiro e ao RNA transportador inicial para iniciar a tradução. Em seguida, os aminoácidos são trazidos ao ribossomo pelos RNA transportadores e ligados entre si para formar uma cadeia. Finalmente, o polipeptídio completo é liberado para cumprir sua função na célula.   
+          </p>
+
+   <br />
+          <p>
+              Os genes bacterianos são frequentemente traduzidos em grupos chamado operons. Portanto, um RNAm bacteriano pode conter as sequências codificadoras de muitos genes. 
+          </p>
+ <br />
+
+          <p>
+          A transcrição gênica é a primeira etapa da expressão do gene. Envolve a cópia da sequência de DNA de um gene para produzir uma molécula de RNA. 
+          </p>
+
+<br />
+          <p>
+          Na transcrição, a sequência de DNA de um gene é copiada para fazer uma molécula de RNA. Essa etapa é chamada de transcrição pois envolve reescrever, ou transcrever, a sequência de DNA num "alfabeto" similar de RNA. Nos eucariontes, a molécula de RNA deve passar por um processamento para se tornar um RNA mensageiro maduro. 
+          </p>
+ <br />
+          <p>
+          Expressão gênica: processo pelo qual a informação hereditária contida em genes, utilizada para formar um produto gênico funcional, como proteínas ou RNA.
+          </p>
+<br /> 
+          <p>
+          Enzima polimerase: enzimas capazes de replicar uma fita de DNA.
+          </p>
        
  
  
