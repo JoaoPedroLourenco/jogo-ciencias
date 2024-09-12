@@ -8,7 +8,6 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Enigma1 from "./Routes/Enigma1.jsx";
 import Enigma2 from "./Routes/Enigma2.jsx";
 import Texto from "./components/Texto/Texto.jsx";
-import Form from "./components/Form/Form.jsx";
 import WinPage from "./Routes/WinPage/WinPage.jsx";
 
 const router = createBrowserRouter([
@@ -18,11 +17,7 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: (
-          <>
-            <Texto /> <Form />
-          </>
-        ),
+        element: <Texto />,
       },
       {
         path: "enigma1",

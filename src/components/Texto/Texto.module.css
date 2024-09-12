@@ -26,3 +26,86 @@
     margin-top: 30px;
     opacity: .3;
 }
+
+
+
+.formInserirPalavras{
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2em;
+}
+  
+form{
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  height: 50px;
+  border-top: 1px solid rgba(255, 255, 255, 0.195);
+  display: flex;
+  gap: 1em;
+}
+  
+form > input[type=text]{
+  width: 300px;
+  height: 50px;
+  background: rgba(86, 86, 86, 0.329);
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 1.2em;
+  color: white;
+  transition: .2s;
+}
+  
+input::placeholder{
+  color: white;
+}
+  
+form > input[type=text]:focus{
+  transition: .2s;
+  box-shadow: 0px 0px 0px 2px #ffffffa1;
+  outline: none;
+}
+  
+form > button{
+  width: 80px;
+  height: 50px;
+  background: black;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.5em;
+  font-weight: normal;
+  cursor: pointer;
+  transition: .2s;
+}
+  
+form > button:hover{
+  background: rgba(0, 0, 0, 0.317);
+}
+  
+ .formInserirPalavras  h2{
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 1em;
+  font-weight: normal;
+  min-width: 150px;
+  text-align: center;
+  height: 40px;
+  line-height: 40px;
+  color: rgba(255, 255, 255, 0.354);
+}
+
+.error{
+  height: 10px;
+  color: red;
+}
+.error p{
+  color: red;
+  font-size: 1.1em;
+  font-weight: 900;
+}
