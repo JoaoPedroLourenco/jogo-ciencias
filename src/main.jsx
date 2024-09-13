@@ -9,6 +9,7 @@ import Enigma1 from "./Routes/Enigma1.jsx";
 import Enigma2 from "./Routes/Enigma2.jsx";
 import Texto from "./components/Texto/Texto.jsx";
 import WinPage from "./Routes/WinPage/WinPage.jsx";
+import Enigma3 from "./Routes/Enigma3.jsx";
 
 const router = createBrowserRouter([
   {
@@ -26,6 +27,10 @@ const router = createBrowserRouter([
       {
         path: "enigma2",
         element: <Enigma2 />,
+      },
+      {
+        path: "enigma3",
+        element: <Enigma3 />,
       },
       {
         path: "vencedor",

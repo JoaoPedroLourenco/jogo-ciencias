@@ -26,4 +26,6 @@
 
 .containerEnigmas img{
   border-radius: 10px;
+  max-width: 800px;
+  max-height: 800px;
 }
