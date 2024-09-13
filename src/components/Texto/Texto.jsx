@@ -54,12 +54,12 @@ const Texto = () => {
         "pelos RNA transportadores e ligados entre si para formar uma cadeia."
       );
     } else if (palavra === "polipeptídio") {
-      setCampo1("síntese de uma cadeia polipeptídica");
+      setCampo1("síntese de uma cadeia polipeptídica.");
       setCampo8("polipeptídio completo é liberado");
     } else if (palavra === "rna mensageiro") {
       setCampo4("RNA mensageiro");
       setCampo10("RNAm bacteriano pode conter as sequências codificadoras");
-      setCampo16("se tornar um RNA mensageiro maduro");
+      setCampo16("se tornar um RNA mensageiro maduro.");
     } else if (palavra === "operons") {
       setCampo9(
         "genes bacterianos são frequentemente traduzidos em grupos chamados operons."
@@ -77,7 +77,7 @@ const Texto = () => {
         <h1>Transcrição e Tradução Gênica</h1>
         <p>
           A tradução gênica é o processo no qual ocorre a{" "}
-          <NavLink to="/enigma1">{campo1}.</NavLink> Ele se inicia quando ocorre
+          <NavLink to="/enigma1">{campo1}</NavLink> Ele se inicia quando ocorre
           o emparelhamento <NavLink>{campo2}</NavLink> metionina com o códon de
           início de tradução localizado em um RNA mensageiro.
         </p>
@@ -86,28 +86,29 @@ const Texto = () => {
           Primeiramente, o <NavLink>{campo3}</NavLink> ao{" "}
           <NavLink>{campo4}</NavLink> e ao <NavLink>{campo5}</NavLink> para
           iniciar a tradução. Em seguida, os <NavLink>{campo6}</NavLink>{" "}
-          <NavLink>{campo7}.</NavLink>
+          <NavLink>{campo7}</NavLink>
           Finalmente, o <NavLink>{campo8}</NavLink> para cumprir sua função na
           célula.
         </p>
 
         <br />
         <p>
-          Os <NavLink>{campo9}.</NavLink> Portanto, um{" "}
+          Os <NavLink>{campo9}</NavLink> Portanto, um{" "}
           <NavLink>{campo10}</NavLink> de muitos genes.
         </p>
         <br />
 
         <p>
-          {campo11} da expressão do gene. Envolve {campo12} de um gene para{" "}
-          {campo13} de RNA.
+          <NavLink>{campo11}</NavLink> da expressão do gene. Envolve{" "}
+          <NavLink>{campo12}</NavLink>de um gene para{" "}
+          <NavLink>{campo13}</NavLink> de RNA.
         </p>
 
         <br />
         <p>
-          Na {campo14} uma molécula de RNA. Essa etapa é chamada de {campo15}{" "}
-          Nos eucariontes, a molécula de RNA deve passar por um processamento
-          para {campo16}.
+          Na <NavLink>{campo14}</NavLink> uma molécula de RNA. Essa etapa é
+          chamada de <NavLink>{campo15}</NavLink> Nos eucariontes, a molécula de
+          RNA deve passar por um processamento para <NavLink>{campo16}</NavLink>
         </p>
         <br />
         <p>
@@ -116,7 +117,9 @@ const Texto = () => {
           proteínas ou RNA.
         </p>
         <br />
-        <p>{campo17} uma fita de DNA.</p>
+        <p>
+          <NavLink>{campo17}</NavLink>uma fita de DNA.
+        </p>
       </div>
       <div className={styles.formInserirPalavras}>
         <div className={styles.error}>

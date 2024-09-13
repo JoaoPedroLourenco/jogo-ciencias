@@ -16,10 +16,14 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  gap: 1em;
+  gap: 3em;
 }
 
 .containerEnigmas p{
   font-size: 2em;
   word-spacing: 20px;
+}
+
+.containerEnigmas img{
+  border-radius: 10px;
 }
