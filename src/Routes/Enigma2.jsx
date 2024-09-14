@@ -1,14 +1,15 @@
 import React from "react";
-import tabelaCodigoMorse from "../assets/imgs/morseCodeTable.jpg";
+
+import nokia from "../assets/imgs/nokia.jpeg";
+import GoBack from "../components/GoBack";
 
 const Enigma2 = () => {
   return (
     <div className="containerEnigmas">
-      <h1>Enigma 2</h1>
-      <p>Transcrição</p>
-      <img src={tabelaCodigoMorse} alt="tabela código morse" />
-
-      <p>- .-. .- -. ... -.-. .-. .. -.-. .- ---</p>
+      <GoBack />
+      <h1>Segun Etapa: Nokia</h1>
+      <img src={nokia} alt="" />
+      <p>7 666 555 444 6 33 777 2 7777 33</p>
     </div>
   );
 };

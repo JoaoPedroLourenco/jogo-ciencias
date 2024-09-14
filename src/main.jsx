@@ -10,6 +10,10 @@ import Enigma2 from "./Routes/Enigma2.jsx";
 import Texto from "./components/Texto/Texto.jsx";
 import WinPage from "./Routes/WinPage/WinPage.jsx";
 import Enigma3 from "./Routes/Enigma3.jsx";
+import Enigma4 from "./Routes/Enigma4.jsx";
+import Enigma5 from "./Routes/Enigma5.jsx";
+import Enigma6 from "./Routes/Enigma6.jsx";
+import Enigma7 from "./Routes/Enigma7.jsx";
 
 const router = createBrowserRouter([
   {
@@ -31,6 +35,22 @@ const router = createBrowserRouter([
       {
         path: "enigma3",
         element: <Enigma3 />,
+      },
+      {
+        path: "enigma4",
+        element: <Enigma4 />,
+      },
+      {
+        path: "enigma5",
+        element: <Enigma5 />,
+      },
+      {
+        path: "enigma6",
+        element: <Enigma6 />,
+      },
+      {
+        path: "enigma7",
+        element: <Enigma7 />,
       },
       {
         path: "vencedor",

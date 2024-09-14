@@ -4,8 +4,8 @@ import styles from "../Texto/Texto.module.css";
 
 import enviar from "../../assets/imgs/mandar.png";
 
-import { useState } from "react";
-import { NavLink } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { NavLink, useNavigate } from "react-router-dom";
 
 const Texto = () => {
   const [palavra, setPalavra] = useState("");
@@ -28,6 +28,51 @@ const Texto = () => {
   const [campo17, setCampo17] = useState("");
 
   const [erro, setErro] = useState("");
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (
+      campo1 &&
+      campo2 &&
+      campo3 &&
+      campo4 &&
+      campo5 &&
+      campo6 &&
+      campo7 &&
+      campo8 &&
+      campo9 &&
+      campo10 &&
+      campo11 &&
+      campo12 &&
+      campo13 &&
+      campo14 &&
+      campo15 &&
+      campo16 &&
+      campo17
+    ) {
+      // Redireciona para a página de vencedor
+      navigate("/vencedor");
+    }
+  }, [
+    campo1,
+    campo2,
+    campo3,
+    campo4,
+    campo5,
+    campo6,
+    campo7,
+    campo8,
+    campo9,
+    campo10,
+    campo11,
+    campo12,
+    campo13,
+    campo14,
+    campo15,
+    campo16,
+    campo17,
+    navigate,
+  ]);
 
   const checarPalavra = (e) => {
     e.preventDefault();

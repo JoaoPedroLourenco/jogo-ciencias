@@ -1,7 +1,15 @@
 import React from "react";
 
+import GoBack from "../components/GoBack";
+
 const Enigma4 = () => {
-  return <div>Enigma4</div>;
+  return (
+    <div className="containerEnigmas">
+      <GoBack />
+      <h1>Quarta Etapa: Coordenadas</h1>
+      <p>https://maps.app.goo.gl/Jkieo2kPah4H5PQa9</p>
+    </div>
+  );
 };
 
 export default Enigma4;
