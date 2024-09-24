@@ -17,6 +17,12 @@ const Enigma7 = () => {
       >
         https://www.dcode.fr/brainfuck-language
       </a>
+
+      <p>2.	Chave: (um número) sobre 
+o príncipe dos filhos de Efraim, Elisama, filho de Amiúde.
+3.	Será usado Cifra de César.
+Na Cifra de César não poderá ser usado tradutor. 
+</p>
     </div>
   );
 };

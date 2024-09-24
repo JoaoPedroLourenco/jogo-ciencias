@@ -11,7 +11,7 @@ const Enigma1 = () => {
       <h1>Primeira Etapa: Morse</h1>
       <img src={tabelaCodigoMorse} alt="tabela código morse" />
 
-      <p>- .-. .- -. ... -.-. .-. .. -.-. .- ---</p>
+      <p className="morse">- .-. .- -. ... -.-. .-. .. -.-. .- ---</p>
     </div>
   );
 };

@@ -92,7 +92,7 @@ const Texto = () => {
     } else if (palavra === "ribossomos") {
       setCampo3("ribossomo se une");
       setCampo6("aminoácidos são trazidos ao ribossomo");
-    } else if (palavra === "rna transportador") {
+    } else if (palavra === "transportador") {
       setCampo2("de um RNA transportador que transporta");
       setCampo5("RNA transportador inicial");
       setCampo7(
@@ -101,7 +101,7 @@ const Texto = () => {
     } else if (palavra === "polipeptídio") {
       setCampo1("síntese de uma cadeia polipeptídica.");
       setCampo8("polipeptídio completo é liberado");
-    } else if (palavra === "rna mensageiro") {
+    } else if (palavra === "mensageiro") {
       setCampo4("RNA mensageiro");
       setCampo10("RNAm bacteriano pode conter as sequências codificadoras");
       setCampo16("se tornar um RNA mensageiro maduro.");
@@ -122,38 +122,38 @@ const Texto = () => {
         <h1>Transcrição e Tradução Gênica</h1>
         <p>
           A tradução gênica é o processo no qual ocorre a{" "}
-          <NavLink to="/enigma1">{campo1}</NavLink> Ele se inicia quando ocorre
-          o emparelhamento <NavLink>{campo2}</NavLink> metionina com o códon de
+          <NavLink to="/enigma3">{campo1}</NavLink> Ele se inicia quando ocorre
+          o emparelhamento <NavLink to="/enigma6">{campo2}</NavLink> metionina com o códon de
           início de tradução localizado em um RNA mensageiro.
         </p>
         <br />
         <p>
-          Primeiramente, o <NavLink>{campo3}</NavLink> ao{" "}
-          <NavLink>{campo4}</NavLink> e ao <NavLink>{campo5}</NavLink> para
-          iniciar a tradução. Em seguida, os <NavLink>{campo6}</NavLink>{" "}
-          <NavLink>{campo7}</NavLink>
-          Finalmente, o <NavLink>{campo8}</NavLink> para cumprir sua função na
+          Primeiramente, o <NavLink to="/enigma4">{campo3}</NavLink> ao{" "}
+          <NavLink to="/enma5">{campo4}</NavLink> e ao <NavLink to="/enigma6">{campo5}</NavLink> para
+          iniciar a tradução. Em seguida, os <NavLink to="/enigma4">{campo6}</NavLink>{" "}
+          <NavLink to="/enigma6">{campo7}</NavLink>
+          Finalmente, o <NavLink to="/enigma3">{campo8}</NavLink> para cumprir sua função na
           célula.
         </p>
 
         <br />
         <p>
-          Os <NavLink>{campo9}</NavLink> Portanto, um{" "}
-          <NavLink>{campo10}</NavLink> de muitos genes.
+          Os <NavLink to="/enigma7">{campo9}</NavLink> Portanto, um{" "}
+          <NavLink to="/enigma5">{campo10}</NavLink> de muitos genes.
         </p>
         <br />
 
         <p>
-          <NavLink>{campo11}</NavLink> da expressão do gene. Envolve{" "}
-          <NavLink>{campo12}</NavLink>de um gene para{" "}
-          <NavLink>{campo13}</NavLink> de RNA.
+          <NavLink to="/enigma1">{campo11}</NavLink> da expressão do gene. Envolve{" "}
+          <NavLink to="/enigma1">{campo12}</NavLink>de um gene para{" "}
+          <NavLink to="/enigma1">{campo13}</NavLink> de RNA.
         </p>
 
         <br />
         <p>
-          Na <NavLink>{campo14}</NavLink> uma molécula de RNA. Essa etapa é
-          chamada de <NavLink>{campo15}</NavLink> Nos eucariontes, a molécula de
-          RNA deve passar por um processamento para <NavLink>{campo16}</NavLink>
+          Na <NavLink to="/enigma1">{campo14}</NavLink> uma molécula de RNA. Essa etapa é
+          chamada de <NavLink to="/enigma1">{campo15}</NavLink> Nos eucariontes, a molécula de
+          RNA deve passar por um processamento para <NavLink to="/enigma5">{campo16}</NavLink>
         </p>
         <br />
         <p>
@@ -163,13 +163,10 @@ const Texto = () => {
         </p>
         <br />
         <p>
-          <NavLink>{campo17}</NavLink>uma fita de DNA.
+          <NavLink to="/enigma2">{campo17}</NavLink>uma fita de DNA.
         </p>
       </div>
       <div className={styles.formInserirPalavras}>
-        <div className={styles.error}>
-          <p>{erro}</p>
-        </div>
         <form onSubmit={checarPalavra}>
           <input
             type="text"

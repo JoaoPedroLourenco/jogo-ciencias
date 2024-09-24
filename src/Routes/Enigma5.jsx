@@ -8,8 +8,8 @@ const Enigma5 = () => {
   return (
     <div className="containerEnigmas">
       <GoBack />
-      <h1>Quinta Etapa: Quadros</h1>
-      <img src={quadro} alt="" />
+      <h1>Quinta Etapa: Quadro</h1>
+      <img src={quadro} alt="" className="quadro"/>
       <img src={numeros} alt="numeros" className="numeros" />
     </div>
   );

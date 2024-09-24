@@ -21,6 +21,10 @@
 
 .containerEnigmas p{
   font-size: 2em;
+  
+}
+
+.morse{
   word-spacing: 20px;
 }
 
@@ -28,6 +32,11 @@
   border-radius: 10px;
   max-width: 800px;
   max-height: 800px;
+}
+
+.quadro{
+  width: 600px;
+  height: 600px;
 }
 
 .goBack{
