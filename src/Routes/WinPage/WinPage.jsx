@@ -1,6 +1,7 @@
 import React from "react";
-import Confetti from "react-confetti";
+
 import { useWindowSize } from "@react-hook/window-size";
+import Confetti from "react-confetti";
 
 const WinPage = () => {
   const { width, height } = useWindowSize();
@@ -11,7 +12,16 @@ const WinPage = () => {
         <h1 style={{ zIndex: "1" }}>Parabéns!</h1>
         <p style={{ zIndex: "1" }}>Você descobriu todas as palavras!</p>
       </div>
-      <Confetti width={width} height={height} style={{ zIndex: "0" }} />
+      <Confetti
+        style={{
+          width: "100vw",
+          zIndex: "0",
+          position: "absolute",
+          top: "0",
+          left: "0",
+          overflow: "hidden",
+        }}
+      />
     </div>
   );
 };

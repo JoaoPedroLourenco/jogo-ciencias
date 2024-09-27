@@ -5,7 +5,7 @@ import styles from "../Texto/Texto.module.css";
 import enviar from "../../assets/imgs/mandar.png";
 
 import { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 
 const Texto = () => {
   const [palavra, setPalavra] = useState("");
@@ -29,73 +29,6 @@ const Texto = () => {
 
   const navigate = useNavigate();
 
-  // Carregar dados do localStorage quando o componente montar
-  useEffect(() => {
-    const camposSalvos = JSON.parse(localStorage.getItem("campos")) || {};
-
-    setCampo1(camposSalvos.campo1 || "");
-    setCampo2(camposSalvos.campo2 || "");
-    setCampo3(camposSalvos.campo3 || "");
-    setCampo4(camposSalvos.campo4 || "");
-    setCampo5(camposSalvos.campo5 || "");
-    setCampo6(camposSalvos.campo6 || "");
-    setCampo7(camposSalvos.campo7 || "");
-    setCampo8(camposSalvos.campo8 || "");
-    setCampo9(camposSalvos.campo9 || "");
-    setCampo10(camposSalvos.campo10 || "");
-    setCampo11(camposSalvos.campo11 || "");
-    setCampo12(camposSalvos.campo12 || "");
-    setCampo13(camposSalvos.campo13 || "");
-    setCampo14(camposSalvos.campo14 || "");
-    setCampo15(camposSalvos.campo15 || "");
-    setCampo16(camposSalvos.campo16 || "");
-    setCampo17(camposSalvos.campo17 || "");
-  }, []);
-
-  // Salvar os campos no localStorage sempre que algum campo mudar
-  useEffect(() => {
-    const campos = {
-      campo1,
-      campo2,
-      campo3,
-      campo4,
-      campo5,
-      campo6,
-      campo7,
-      campo8,
-      campo9,
-      campo10,
-      campo11,
-      campo12,
-      campo13,
-      campo14,
-      campo15,
-      campo16,
-      campo17,
-    };
-
-    localStorage.setItem("campos", JSON.stringify(campos));
-  }, [
-    campo1,
-    campo2,
-    campo3,
-    campo4,
-    campo5,
-    campo6,
-    campo7,
-    campo8,
-    campo9,
-    campo10,
-    campo11,
-    campo12,
-    campo13,
-    campo14,
-    campo15,
-    campo16,
-    campo17,
-  ]);
-
-  // Redireciona para a página de vencedor quando todos os campos estiverem preenchidos
   useEffect(() => {
     if (
       campo1 &&
@@ -116,7 +49,8 @@ const Texto = () => {
       campo16 &&
       campo17
     ) {
-      navigate("/rnzGwPRHgvoSQljFtVZD");
+      // Redireciona para a página de vencedor
+      navigate("/vencedor");
     }
   }, [
     campo1,
@@ -157,7 +91,7 @@ const Texto = () => {
     } else if (palavra === "ribossomos") {
       setCampo3("ribossomo se une");
       setCampo6("aminoácidos são trazidos ao ribossomo");
-    } else if (palavra === "transportador") {
+    } else if (palavra === "rna transportador") {
       setCampo2("de um RNA transportador que transporta");
       setCampo5("RNA transportador inicial");
       setCampo7(
@@ -166,7 +100,7 @@ const Texto = () => {
     } else if (palavra === "polipeptídio") {
       setCampo1("síntese de uma cadeia polipeptídica.");
       setCampo8("polipeptídio completo é liberado");
-    } else if (palavra === "mensageiro") {
+    } else if (palavra === "rna mensageiro") {
       setCampo4("RNA mensageiro");
       setCampo10("RNAm bacteriano pode conter as sequências codificadoras");
       setCampo16("se tornar um RNA mensageiro maduro.");
@@ -174,6 +108,8 @@ const Texto = () => {
       setCampo9(
         "genes bacterianos são frequentemente traduzidos em grupos chamados operons."
       );
+    } else {
+      setErro("Palavra não encontrada!");
     }
 
     setPalavra("");
@@ -187,10 +123,7 @@ const Texto = () => {
           A tradução gênica é o processo no qual ocorre a <span>{campo1}</span>{" "}
           Ele se inicia quando ocorre o emparelhamento <span>{campo2}</span>{" "}
           metionina com o códon de início de tradução localizado em um RNA
-          mensageiro. A tradução gênica é o processo no qual ocorre a{" "}
-          <NavLink to="/enigma3">{campo1}</NavLink> Ele se inicia quando ocorre
-          o emparelhamento <NavLink to="/enigma6">{campo2}</NavLink> metionina
-          com o códon de início de tradução localizado em um RNA mensageiro.
+          mensageiro.
         </p>
         <br />
         <p>
@@ -198,29 +131,18 @@ const Texto = () => {
           <span>{campo5}</span> para iniciar a tradução. Em seguida, os{" "}
           <span>{campo6}</span> <span>{campo7}</span>
           Finalmente, o <span>{campo8}</span> para cumprir sua função na célula.
-          Primeiramente, o <NavLink to="/enigma4">{campo3}</NavLink> ao{" "}
-          <NavLink to="/enma5">{campo4}</NavLink> e ao{" "}
-          <NavLink to="/enigma6">{campo5}</NavLink> para iniciar a tradução. Em
-          seguida, os <NavLink to="/enigma4">{campo6}</NavLink>{" "}
-          <NavLink to="/enigma6">{campo7}</NavLink>
-          Finalmente, o <NavLink to="/enigma3">{campo8}</NavLink> para cumprir
-          sua função na célula.
         </p>
 
         <br />
         <p>
           Os <span>{campo9}</span> Portanto, um <span>{campo10}</span> de muitos
-          genes. Os <NavLink to="/enigma7">{campo9}</NavLink> Portanto, um{" "}
-          <NavLink to="/enigma5">{campo10}</NavLink> de muitos genes.
+          genes.
         </p>
         <br />
 
         <p>
           <span>{campo11}</span> da expressão do gene. Envolve{" "}
           <span>{campo12}</span> de um gene para <span>{campo13}</span> de RNA.
-          <NavLink to="/enigma1">{campo11}</NavLink> da expressão do gene.
-          Envolve <NavLink to="/enigma1">{campo12}</NavLink>de um gene para{" "}
-          <NavLink to="/enigma1">{campo13}</NavLink> de RNA.
         </p>
 
         <br />
@@ -228,10 +150,6 @@ const Texto = () => {
           Na <span>{campo14}</span> uma molécula de RNA. Essa etapa é chamada de{" "}
           <span>{campo15}</span> Nos eucariontes, a molécula de RNA deve passar
           por um processamento para <span>{campo16}</span>
-          Na <NavLink to="/enigma1">{campo14}</NavLink> uma molécula de RNA.
-          Essa etapa é chamada de <NavLink to="/enigma1">{campo15}</NavLink> Nos
-          eucariontes, a molécula de RNA deve passar por um processamento para{" "}
-          <NavLink to="/enigma5">{campo16}</NavLink>
         </p>
         <br />
         <p>
@@ -242,7 +160,6 @@ const Texto = () => {
         <br />
         <p>
           <span>{campo17}</span>uma fita de DNA.
-          <NavLink to="/enigma2">{campo17}</NavLink>uma fita de DNA.
         </p>
       </div>
       <div className={styles.formInserirPalavras}>

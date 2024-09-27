@@ -34,6 +34,11 @@
   line-height: 30px;
 }
 
+img.quadro{
+  width: 600px;
+  height: 600px;
+}
+
 .containerEnigmas img{
   border-radius: 10px;
   max-width: 800px;
