@@ -41,6 +41,7 @@
   margin: 0px 10px;
   transition: .2s;
   text-decoration: none;
+  font-size: .8em;
 }
 
 .texto p a:hover{

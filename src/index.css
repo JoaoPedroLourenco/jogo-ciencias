@@ -40,8 +40,9 @@
   max-height: 800px;
 }
 
-.containerEnigmas h1{
-  font-size: 3em;
+.quadro{
+  width: 600px;
+  height: 600px;
 }
 
 .goBack{
