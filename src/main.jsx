@@ -53,7 +53,7 @@ const router = createBrowserRouter([
         element: <Enigma7 />,
       },
       {
-        path: "vencedor",
+        path: "rnzGwPRHgvoSQljFtVZD",
         element: <WinPage />,
       },
     ],

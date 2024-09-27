@@ -5,7 +5,7 @@ import styles from "../Texto/Texto.module.css";
 import enviar from "../../assets/imgs/mandar.png";
 
 import { useState, useEffect } from "react";
-import { NavLink, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const Texto = () => {
   const [palavra, setPalavra] = useState("");
@@ -27,9 +27,75 @@ const Texto = () => {
   const [campo16, setCampo16] = useState("");
   const [campo17, setCampo17] = useState("");
 
-  const [erro, setErro] = useState("");
   const navigate = useNavigate();
 
+  // Carregar dados do localStorage quando o componente montar
+  useEffect(() => {
+    const camposSalvos = JSON.parse(localStorage.getItem("campos")) || {};
+
+    setCampo1(camposSalvos.campo1 || "");
+    setCampo2(camposSalvos.campo2 || "");
+    setCampo3(camposSalvos.campo3 || "");
+    setCampo4(camposSalvos.campo4 || "");
+    setCampo5(camposSalvos.campo5 || "");
+    setCampo6(camposSalvos.campo6 || "");
+    setCampo7(camposSalvos.campo7 || "");
+    setCampo8(camposSalvos.campo8 || "");
+    setCampo9(camposSalvos.campo9 || "");
+    setCampo10(camposSalvos.campo10 || "");
+    setCampo11(camposSalvos.campo11 || "");
+    setCampo12(camposSalvos.campo12 || "");
+    setCampo13(camposSalvos.campo13 || "");
+    setCampo14(camposSalvos.campo14 || "");
+    setCampo15(camposSalvos.campo15 || "");
+    setCampo16(camposSalvos.campo16 || "");
+    setCampo17(camposSalvos.campo17 || "");
+  }, []);
+
+  // Salvar os campos no localStorage sempre que algum campo mudar
+  useEffect(() => {
+    const campos = {
+      campo1,
+      campo2,
+      campo3,
+      campo4,
+      campo5,
+      campo6,
+      campo7,
+      campo8,
+      campo9,
+      campo10,
+      campo11,
+      campo12,
+      campo13,
+      campo14,
+      campo15,
+      campo16,
+      campo17,
+    };
+
+    localStorage.setItem("campos", JSON.stringify(campos));
+  }, [
+    campo1,
+    campo2,
+    campo3,
+    campo4,
+    campo5,
+    campo6,
+    campo7,
+    campo8,
+    campo9,
+    campo10,
+    campo11,
+    campo12,
+    campo13,
+    campo14,
+    campo15,
+    campo16,
+    campo17,
+  ]);
+
+  // Redireciona para a página de vencedor quando todos os campos estiverem preenchidos
   useEffect(() => {
     if (
       campo1 &&
@@ -50,8 +116,7 @@ const Texto = () => {
       campo16 &&
       campo17
     ) {
-      // Redireciona para a página de vencedor
-      navigate("/vencedor");
+      navigate("/rnzGwPRHgvoSQljFtVZD");
     }
   }, [
     campo1,
@@ -92,7 +157,7 @@ const Texto = () => {
     } else if (palavra === "ribossomos") {
       setCampo3("ribossomo se une");
       setCampo6("aminoácidos são trazidos ao ribossomo");
-    } else if (palavra === "rna transportador") {
+    } else if (palavra === "transportador") {
       setCampo2("de um RNA transportador que transporta");
       setCampo5("RNA transportador inicial");
       setCampo7(
@@ -101,7 +166,7 @@ const Texto = () => {
     } else if (palavra === "polipeptídio") {
       setCampo1("síntese de uma cadeia polipeptídica.");
       setCampo8("polipeptídio completo é liberado");
-    } else if (palavra === "rna mensageiro") {
+    } else if (palavra === "mensageiro") {
       setCampo4("RNA mensageiro");
       setCampo10("RNAm bacteriano pode conter as sequências codificadoras");
       setCampo16("se tornar um RNA mensageiro maduro.");
@@ -109,8 +174,6 @@ const Texto = () => {
       setCampo9(
         "genes bacterianos são frequentemente traduzidos em grupos chamados operons."
       );
-    } else {
-      setErro("Palavra não encontrada!");
     }
 
     setPalavra("");
@@ -121,39 +184,36 @@ const Texto = () => {
       <div className={styles.texto}>
         <h1>Transcrição e Tradução Gênica</h1>
         <p>
-          A tradução gênica é o processo no qual ocorre a{" "}
-          <NavLink to="/enigma1">{campo1}</NavLink> Ele se inicia quando ocorre
-          o emparelhamento <NavLink>{campo2}</NavLink> metionina com o códon de
-          início de tradução localizado em um RNA mensageiro.
+          A tradução gênica é o processo no qual ocorre a <span>{campo1}</span>{" "}
+          Ele se inicia quando ocorre o emparelhamento <span>{campo2}</span>{" "}
+          metionina com o códon de início de tradução localizado em um RNA
+          mensageiro.
         </p>
         <br />
         <p>
-          Primeiramente, o <NavLink>{campo3}</NavLink> ao{" "}
-          <NavLink>{campo4}</NavLink> e ao <NavLink>{campo5}</NavLink> para
-          iniciar a tradução. Em seguida, os <NavLink>{campo6}</NavLink>{" "}
-          <NavLink>{campo7}</NavLink>
-          Finalmente, o <NavLink>{campo8}</NavLink> para cumprir sua função na
-          célula.
+          Primeiramente, o <span>{campo3}</span> ao <span>{campo4}</span> e ao{" "}
+          <span>{campo5}</span> para iniciar a tradução. Em seguida, os{" "}
+          <span>{campo6}</span> <span>{campo7}</span>
+          Finalmente, o <span>{campo8}</span> para cumprir sua função na célula.
         </p>
 
         <br />
         <p>
-          Os <NavLink>{campo9}</NavLink> Portanto, um{" "}
-          <NavLink>{campo10}</NavLink> de muitos genes.
+          Os <span>{campo9}</span> Portanto, um <span>{campo10}</span> de muitos
+          genes.
         </p>
         <br />
 
         <p>
-          <NavLink>{campo11}</NavLink> da expressão do gene. Envolve{" "}
-          <NavLink>{campo12}</NavLink>de um gene para{" "}
-          <NavLink>{campo13}</NavLink> de RNA.
+          <span>{campo11}</span> da expressão do gene. Envolve{" "}
+          <span>{campo12}</span> de um gene para <span>{campo13}</span> de RNA.
         </p>
 
         <br />
         <p>
-          Na <NavLink>{campo14}</NavLink> uma molécula de RNA. Essa etapa é
-          chamada de <NavLink>{campo15}</NavLink> Nos eucariontes, a molécula de
-          RNA deve passar por um processamento para <NavLink>{campo16}</NavLink>
+          Na <span>{campo14}</span> uma molécula de RNA. Essa etapa é chamada de{" "}
+          <span>{campo15}</span> Nos eucariontes, a molécula de RNA deve passar
+          por um processamento para <span>{campo16}</span>
         </p>
         <br />
         <p>
@@ -163,13 +223,10 @@ const Texto = () => {
         </p>
         <br />
         <p>
-          <NavLink>{campo17}</NavLink>uma fita de DNA.
+          <span>{campo17}</span>uma fita de DNA.
         </p>
       </div>
       <div className={styles.formInserirPalavras}>
-        <div className={styles.error}>
-          <p>{erro}</p>
-        </div>
         <form onSubmit={checarPalavra}>
           <input
             type="text"

@@ -1,11 +1,8 @@
 import React from "react";
 
-import GoBack from "../components/GoBack";
-
 const Enigma6 = () => {
   return (
     <div className="containerEnigmas">
-      <GoBack />
       <h1>Sexta Etapa: Letras Solitárias</h1>
       <p className="linksMaps">
         https://maps.app.goo.gl/Hb92GJ3mUBsf5P9r6

@@ -1,0 +1,49 @@
+.anotacoes{
+    width: 15vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-left: 1px solid rgba(255, 255, 255, 0.215);
+    padding: 0px 10px;
+}
+
+.anotacoesCard p{
+    font-size: 1.3em;
+}
+
+.anotacoes .anotacoesCard{
+    width: 100%;
+    height: 50%;
+    background: rgba(87, 87, 87, 0.317);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: .5em;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.anotacoesCard p{
+    background: none;
+}
+
+.anotacoesCard textarea{
+    width: 100%;
+    height: 90%;
+    border-radius: 10px;
+    font-size: 1.1em;
+    font-weight: 500;
+    padding: 10px;
+    transition: .2s;
+    border: 1px solid #ffffffa1;
+    resize: none;
+}
+
+textarea:focus{
+    transition: .2s;
+    box-shadow: 0px 0px 0px 2px #ffffffa1;
+    outline: none;
+}

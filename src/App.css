@@ -1,10 +1,14 @@
 .App{
-  width: 70%;
+  display: flex;
+  gap: 4em;
+}
+
+.container{
+  width: 70vw;
   height: 100vh;
-  margin: 0 auto;
   display: flex;
   flex-direction: column;
-  gap: .8em;
+  gap: .5em;
 }
 
 

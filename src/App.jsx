@@ -1,10 +1,16 @@
 import "./App.css";
 import { Outlet } from "react-router-dom";
+import SideBar from "./components/SideBar/SideBar";
+import Anotacoes from "./components/Anotações/Anotacoes";
 
 function App() {
   return (
     <div className="App">
-      <Outlet />
+      <SideBar />
+      <div className="container">
+        <Outlet />
+      </div>
+      <Anotacoes />
     </div>
   );
 }

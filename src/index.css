@@ -20,14 +20,28 @@
 }
 
 .containerEnigmas p{
-  font-size: 2em;
+  font-size: 2em; 
+}
+
+.morse{
   word-spacing: 20px;
+}
+
+.dicaCesar p{
+  font-size: 1.2em;
+  margin-top: 50px;
+  text-align: center;
+  line-height: 30px;
 }
 
 .containerEnigmas img{
   border-radius: 10px;
   max-width: 800px;
   max-height: 800px;
+}
+
+.containerEnigmas h1{
+  font-size: 3em;
 }
 
 .goBack{
@@ -46,9 +60,9 @@
 }
 
 .linksMaps{
-display: flex;
-flex-direction: column;
-gap: 1em;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
 }
 
 .link{
@@ -65,4 +79,21 @@ gap: 1em;
 
 .winPage > h1{
   font-size: 3em;
+}
+
+.winPage .textWinPage{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: .5em;
+}
+
+.textWinPage h1{
+  font-size: 5em;
+  background: none;
+}
+
+.textWinPage p{
+  font-size: 2em;
+  background: none;
 }
