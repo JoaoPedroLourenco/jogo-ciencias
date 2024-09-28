@@ -5,7 +5,7 @@ import styles from "../Texto/Texto.module.css";
 import enviar from "../../assets/imgs/mandar.png";
 
 import { useState, useEffect } from "react";
-import { NavLink, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const Texto = () => {
   const [palavra, setPalavra] = useState("");
@@ -50,7 +50,7 @@ const Texto = () => {
       campo17
     ) {
       // Redireciona para a página de vencedor
-      navigate("/vencedor");
+      navigate("/rnzGwPRHgvoSQljFtVZD");
     }
   }, [
     campo1,
@@ -88,19 +88,19 @@ const Texto = () => {
       );
     } else if (palavra === "polimerase") {
       setCampo17("Enzima polimerase: enzimas capazes de replicar");
-    } else if (palavra === "ribossomos") {
+    } else if (palavra === "ribossomo") {
       setCampo3("ribossomo se une");
       setCampo6("aminoácidos são trazidos ao ribossomo");
-    } else if (palavra === "rna transportador") {
+    } else if (palavra === "transportador") {
       setCampo2("de um RNA transportador que transporta");
       setCampo5("RNA transportador inicial");
       setCampo7(
         "pelos RNA transportadores e ligados entre si para formar uma cadeia."
       );
-    } else if (palavra === "polipeptídio") {
+    } else if (palavra === "polipeptídeo") {
       setCampo1("síntese de uma cadeia polipeptídica.");
       setCampo8("polipeptídio completo é liberado");
-    } else if (palavra === "rna mensageiro") {
+    } else if (palavra === "mensageiro") {
       setCampo4("RNA mensageiro");
       setCampo10("RNAm bacteriano pode conter as sequências codificadoras");
       setCampo16("se tornar um RNA mensageiro maduro.");
@@ -108,8 +108,6 @@ const Texto = () => {
       setCampo9(
         "genes bacterianos são frequentemente traduzidos em grupos chamados operons."
       );
-    } else {
-      setErro("Palavra não encontrada!");
     }
 
     setPalavra("");
