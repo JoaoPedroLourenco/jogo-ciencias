@@ -76,7 +76,9 @@ const Texto = () => {
   const checarPalavra = (e) => {
     e.preventDefault();
 
-    if (palavra === "transcrição") {
+    let palavraMinuscula = palavra.toLowerCase();
+
+    if (palavraMinuscula === "transcrição") {
       setCampo11("A transcrição gênica é a primeira etapa");
       setCampo12("a cópia da sequência de DNA ");
       setCampo13("produzir uma molécula");
@@ -86,25 +88,25 @@ const Texto = () => {
       setCampo15(
         "transcrição pois envolve reescrever, ou transcrever, a sequência de DNA num 'alfabeto' similar de RNA. "
       );
-    } else if (palavra === "polimerase") {
+    } else if (palavraMinuscula === "polimerase") {
       setCampo17("Enzima polimerase: enzimas capazes de replicar");
-    } else if (palavra === "ribossomo") {
+    } else if (palavraMinuscula === "ribossomo") {
       setCampo3("ribossomo se une");
       setCampo6("aminoácidos são trazidos ao ribossomo");
-    } else if (palavra === "transportador") {
+    } else if (palavraMinuscula === "transportador") {
       setCampo2("de um RNA transportador que transporta");
       setCampo5("RNA transportador inicial");
       setCampo7(
         "pelos RNA transportadores e ligados entre si para formar uma cadeia."
       );
-    } else if (palavra === "polipeptídeo") {
+    } else if (palavraMinuscula === "polipeptídeo") {
       setCampo1("síntese de uma cadeia polipeptídica.");
       setCampo8("polipeptídio completo é liberado");
-    } else if (palavra === "mensageiro") {
+    } else if (palavraMinuscula === "mensageiro") {
       setCampo4("RNA mensageiro");
       setCampo10("RNAm bacteriano pode conter as sequências codificadoras");
       setCampo16("se tornar um RNA mensageiro maduro.");
-    } else if (palavra === "operons") {
+    } else if (palavraMinuscula === "operons") {
       setCampo9(
         "genes bacterianos são frequentemente traduzidos em grupos chamados operons."
       );
